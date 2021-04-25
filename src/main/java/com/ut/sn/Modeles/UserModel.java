@@ -9,12 +9,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 import org.hibernate.annotations.CreationTimestamp;
 
 @Entity
-@Table(name = "user")
-@XmlRootElement
-@NamedQueries({ @NamedQuery(name = "User.findAll", query = "SELECT u FROM UserModel u"),
-		@NamedQuery(name = "User.findByIduser", query = "SELECT u FROM UserModel u WHERE u.iduser = :iduser"),
-		@NamedQuery(name = "User.findByEmail", query = "SELECT u FROM UserModel u WHERE u.email = :email"),
-		@NamedQuery(name = "User.findByPassword", query = "SELECT u FROM UserModel u WHERE u.password = :password") })
+@Table(name = "user_model")
 public class UserModel {
 
 	@Id
